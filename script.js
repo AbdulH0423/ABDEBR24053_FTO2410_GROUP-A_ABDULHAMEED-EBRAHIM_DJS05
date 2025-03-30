@@ -46,3 +46,9 @@ function createStore(reducer) {
     dispatch({type: "INIT"});// Initial action to set the initial state
     
     
+    return {
+        getState,
+        dispatch,
+        subscribe
+    };
+}
