@@ -52,3 +52,28 @@ function createStore(reducer) {
         subscribe
     };
 }
+
+
+// Reducer function to handle state changes
+
+/**
+ * 
+ * @param {Object} state - the current state
+ * @param {Object} action - the action object with a type property
+ * @returns {Object}- the new state
+ */
+
+function reducer(state, action) {
+    switch (action.type) {
+        case "increment":
+            return { count: state.count + 1 };
+    
+        case "decrement":
+            return { count: state.count - 1 };
+
+         case "reset":
+            return { count: 0 };
+        default:
+            return state;
+    }
+}
