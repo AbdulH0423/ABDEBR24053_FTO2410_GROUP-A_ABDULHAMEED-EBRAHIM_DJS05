@@ -91,3 +91,10 @@ store.subscribe(function(){
 
 console.log("Intial state:", store.getState());// count:0
 
+//Increment the count(scenario2)
+
+store.dispatch({ type: "increment" });
+store.dispatch({ type: "increment" });
+store.dispatch({ type: "increment" });
+console.log("Increased state:", store.getState());// count:3
+
