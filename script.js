@@ -103,3 +103,7 @@ store.dispatch({ type: "decrement" });
 store.dispatch({ type: "decrement" });
 console.log("Decreased state:", store.getState());// count:1
 
+
+//Reset the count(scenario4)
+store.dispatch({ type: "reset" });
+console.log("Reset state:", store.getState());// count:0
