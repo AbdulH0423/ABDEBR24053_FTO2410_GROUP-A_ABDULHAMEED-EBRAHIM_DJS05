@@ -35,3 +35,14 @@ function createStore(reducer) {
          * @param {Function} listener - the function to call when the state changes
          * @returns {Function} - A function to unsubsribe the listener
          */
+    function subscribe(listener) {
+        listeners.push(listener);
+        return function(){
+            listeners = listeners.filter(function(l){
+                return l !== listener;
+            });
+        };
+    }
+    dispatch({type: "INIT"});// Initial action to set the initial state
+    
+    
