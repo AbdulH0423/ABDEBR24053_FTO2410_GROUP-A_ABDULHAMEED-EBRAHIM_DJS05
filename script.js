@@ -82,3 +82,7 @@ function reducer(state, action) {
 
 const store = createStore(reducer);
 
+// Subscribe to store updates
+store.subscribe(function(){
+    console.log("Updated state:", store.getState());
+});
