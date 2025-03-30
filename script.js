@@ -22,3 +22,16 @@ function createStore(reducer) {
      * @param {Object} action - the action object containing the type of state change
      */
 
+    function dispatch(action){
+        state = reducer(state,action);
+        listeners.forEach(
+            function(listener){
+                listener();
+            });
+        }
+
+        /**
+         * 
+         * @param {Function} listener - the function to call when the state changes
+         * @returns {Function} - A function to unsubsribe the listener
+         */
