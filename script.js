@@ -77,3 +77,8 @@ function reducer(state, action) {
             return state;
     }
 }
+
+// Create the store
+
+const store = createStore(reducer);
+
