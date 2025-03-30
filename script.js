@@ -98,3 +98,8 @@ store.dispatch({ type: "increment" });
 store.dispatch({ type: "increment" });
 console.log("Increased state:", store.getState());// count:3
 
+//Decrement the count(scenario3)
+store.dispatch({ type: "decrement" });
+store.dispatch({ type: "decrement" });
+console.log("Decreased state:", store.getState());// count:1
+
